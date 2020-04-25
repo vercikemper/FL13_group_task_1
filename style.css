@@ -1,0 +1,131 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+main {
+  background-image: url("http://i.piccy.info/i9/d5827d207c4dd5b55ef8c4e7f938062e/1587810605/654038/1374944/background.jpg");
+  height: 650px;
+  width: 810px;
+  border-radius: 6px;
+  background-size: cover;
+  box-shadow: -5px 5px 22px 2px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+/* play btn */
+button {
+  align-self: center;
+  border: solid 10px transparent;
+  padding: 3px;
+  width: 105px;
+  height: 105px;
+  border-radius: 160px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px #c9c9c9, 100px;
+  background: conic-gradient(
+      #d7d7d7,
+      #c3c3c3,
+      #cccccc,
+      #c6c6c6,
+      #d3d3d3,
+      #d8d8d8,
+      #d5d5d5,
+      #d8d8d8,
+      #d3d3d3,
+      #c5c5c5,
+      #c0c0c0,
+      #bfbfbf,
+      #d0d0d0,
+      #d9d9d9,
+      #d1d1d1,
+      #c5c5c5,
+      #c8c8c8,
+      #d7d7d7,
+      #d5d5d5,
+      #cdcdcd,
+      #c4c4c4,
+      #d9d9d9,
+      #cecece,
+      #c5c5c5,
+      #c5c5c5,
+      #cdcdcd,
+      #d8d8d8,
+      #d9d9d9,
+      #d7d7d7
+    )
+    content-box;
+  position: absolute;
+  right: 38px;
+  bottom: 38px;
+}
+
+/* vinyl */
+.record-player {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  box-shadow: -6px 6px 9px #000000de;
+  border-radius: 50%;
+  z-index: 500;
+}
+
+.vinyl {
+  border-radius: 50%;
+  min-width: 560px;
+  min-height: 560px;
+  background-color: black;
+  background: repeating-conic-gradient(
+      from 45deg,
+      rgba(255, 255, 255, 0.15) 0deg,
+      transparent 30deg 40%,
+      rgba(255, 255, 255, 0.15) 180deg
+    ),
+    repeating-radial-gradient(
+      at center,
+      #131313,
+      #131313 2px,
+      black 1px,
+      black 6px
+    );
+  z-index: 5;
+}
+
+.vinyl-img {
+  background-image: url("http://i.piccy.info/i9/b75ce809a37121f80805d2b7c45fecea/1587747365/43895/1374833/vinyl5.jpg");
+  background-size: 170px;
+  top: 185px;
+  left: 185px;
+  border-radius: 50%;
+  z-index: 7;
+  width: 190px;
+  height: 190px;
+  z-index: 7;
+  position: absolute;
+  border: 11px black solid;
+  box-sizing: border-box;
+}
+
+.vinyl-middle {
+  top: 270px;
+  left: 270px;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  z-index: 7;
+  background-color: #a5a2a2;
+  position: absolute;
+  box-shadow: inset -2px 2px 4px #ffffffa2, -3px 3px 3px #000000;
+}
+
+/* stick */
+svg {
+  position: absolute;
+  right: 80px;
+  top: 40px;
+  z-index: 1000;
+}
