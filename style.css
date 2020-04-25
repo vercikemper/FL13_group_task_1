@@ -116,7 +116,7 @@ button {
   border-radius: 50%;
   width: 18px;
   height: 18px;
-  z-index: 7;
+  z-index: 20;
   background-color: #a5a2a2;
   position: absolute;
   box-shadow: inset -2px 2px 4px #ffffffa2, -3px 3px 3px #000000;
@@ -207,15 +207,15 @@ button {
   width: 210px;
   height: 210px;
   position: relative;
-  z-index: 0;
-  bottom: 274px;
-  left: 205px;
+  z-index: -5;
+  bottom: 5px;
+  left: 475px;
 }
 /* stick */
 .stick {
   position: relative;
   right: -110px;
-  bottom: 485px;
+  bottom: 272px;
   z-index: 35;
 }
 .disc-overTonarm {
@@ -223,9 +223,36 @@ button {
   height: 80px;
   position: relative;
   z-index: 100;
-  bottom: 945px;
+  bottom: 735px;
   left: 270px;
   -webkit-box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 1);
   -moz-box-shadow: inset 0px 0px 3px 4px rgba(0, 0, 0, 1);
   box-shadow: inset 0px 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
+
+#rect1 {
+    fill: url(#Gradient1);
+  }
+  .stop1 {
+    stop-color: grey;
+  }
+  .stop2 {
+    stop-color: white;
+    stop-opacity: 0;
+  }
+  .stop3 {
+    stop-color: grey;
+  }
+  #rect2 {
+    fill: url(#Gradient2);
+  }
+  .stop1 {
+    stop-color: grey;
+  }
+  .stop2 {
+    stop-color: white;
+    stop-opacity: 1;
+  }
+  .stop3 {
+    stop-color: grey;
+  }
