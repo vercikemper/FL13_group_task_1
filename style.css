@@ -124,43 +124,9 @@ button {
 
 .play {
   position: relative;
-  right: -30px;
-  top: 28px;
+  right: -26px;
+  top: 20px;
   z-index: 100;
-}
-
-.disc-underTonarm,
-.disc-overTonarm,
-.btn-play {
-  border-radius: 50%;
-  border: 2px solid black;
-  background: conic-gradient(
-    #cdcdcd,
-    #9d9d9d,
-    #808080,
-    #bcbcbc,
-    #c4c4c4,
-    #e6e6e6,
-    #dddddd,
-    #a1a1a1,
-    #7f7f7f,
-    #8b8b8b,
-    #bfbfbf,
-    #e3e3e3,
-    #d2d2d2,
-    #a6a6a6,
-    #858585,
-    #8d8d8d,
-    #c0c0c0,
-    #e5e5e5,
-    #d6d6d6,
-    #9e9e9e,
-    #828282,
-    #8f8f8f,
-    #bdbdbd,
-    #e3e3e3,
-    #cdcdcd
-  );
 }
 
 .disc-underTonarm,
@@ -204,12 +170,12 @@ button {
   box-shadow: inset 0px 0px 2px 3px rgba(0, 0, 0, 1);
 }
 .disc-underTonarm {
-  width: 210px;
-  height: 210px;
+  width: 190px;
+  height: 190px;
   position: relative;
   z-index: -5;
   bottom: 5px;
-  left: 475px;
+  left: 485px;
 }
 /* stick */
 .stick {
@@ -221,38 +187,120 @@ button {
 .disc-overTonarm {
   width: 80px;
   height: 80px;
+  border: 1px solid grey;
   position: relative;
   z-index: 100;
-  bottom: 735px;
+  bottom: 740px;
   left: 270px;
-  -webkit-box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 1);
-  -moz-box-shadow: inset 0px 0px 3px 4px rgba(0, 0, 0, 1);
-  box-shadow: inset 0px 0px 2px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -4px 3px 3px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -4px 3px 3px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: -4px 3px 3px 2px rgba(0, 0, 0, 0.5);
 }
 
 #rect1 {
-    fill: url(#Gradient1);
+  fill: url(#Gradient1);
+}
+.stop1 {
+  stop-color: grey;
+}
+.stop2 {
+  stop-color: white;
+  stop-opacity: 0;
+}
+.stop3 {
+  stop-color: grey;
+}
+#rect2 {
+  fill: url(#Gradient2);
+}
+.stop1 {
+  stop-color: grey;
+}
+.stop2 {
+  stop-color: white;
+  stop-opacity: 1;
+}
+.stop3 {
+  stop-color: grey;
+}
+
+.line-one{
+  stroke: rgb(0, 0, 0); 
+  stroke-width: 2; 
+  stroke-linejoin: round;
+  z-index: 0;
+}
+
+.line-two{
+  stroke: rgb(0, 0, 0); 
+  stroke-width: 4; 
+  stroke-linejoin: round;
+  z-index: 0;
+}
+
+.line-three{
+  stroke: rgb(0, 0, 0); 
+  stroke-width: 2; 
+  stroke-linejoin: round;
+  z-index: 0;
+}
+
+.line-one-active{
+  display: none;
+  stroke: rgb(231, 110, 12);
+  stroke-width: 2; 
+  stroke-linejoin: round;
+  z-index: 5;
+}
+
+.line-two-active{
+  display: none;
+  stroke: rgb(231, 110, 12);
+  stroke-width: 4; 
+  stroke-linejoin: round;
+  z-index: 5;
+}
+
+.line-three-active{
+  display: none;
+  stroke: rgb(231, 110, 12); 
+  stroke-width: 2; 
+  stroke-linejoin: round;
+  z-index: 5;
+}
+
+
+/*play activeted*/
+
+.btn-play {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 0px;
+  right: -150px;
+}
+
+input:checked ~ .vinyl-img {
+  animation: 3s linear 1.5s animation infinite;
+}
+
+input:checked ~ .vinyl-middle .stick {
+  transform: rotate(30deg);
+  transition: transform 2s;
+  transform-origin: 65% 23%;
+}
+
+#play {
+  position: absolute;
+  bottom: 20px;
+  right: -100px;
+}
+
+@keyframes animation {
+  0% {
+    transform: rotate(0deg);
   }
-  .stop1 {
-    stop-color: grey;
+  100% {
+    transform: rotate(360deg);
   }
-  .stop2 {
-    stop-color: white;
-    stop-opacity: 0;
-  }
-  .stop3 {
-    stop-color: grey;
-  }
-  #rect2 {
-    fill: url(#Gradient2);
-  }
-  .stop1 {
-    stop-color: grey;
-  }
-  .stop2 {
-    stop-color: white;
-    stop-opacity: 1;
-  }
-  .stop3 {
-    stop-color: grey;
-  }
+}
